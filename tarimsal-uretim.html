@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarım ve Tarımsal Üretim - AgriMind</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2196F3',
+secondary: '#4CAF50'
+},
+borderRadius: {
+'none': '0px','sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px',
+'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px'
+},
+fontFamily: { 'heading': ['Poppins', 'sans-serif'], 'body': ['Open Sans', 'sans-serif'], 'logo': ['Pacifico', 'serif'] }
+}
+}
+}
+</script>
+<style>
+body { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+.gradient-bg { background: linear-gradient(135deg, #15803d 0%, #0d9488 100%); }
+.step-number { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 9999px; color: white; font-weight: bold; flex-shrink: 0; }
+</style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<a href="index.html" class="font-['Pacifico'] text-3xl text-primary hover:opacity-80 transition">AgriMind</a>
+<div class="flex items-center gap-8">
+<a href="index.html" class="text-gray-700 hover:text-primary transition flex items-center gap-2 font-semibold"><i class="ri-arrow-left-line"></i> Ana Sayfaya Dön</a>
+</div>
+</div>
+</nav>
+
+<!-- Page Header -->
+<section class="gradient-bg pt-32 pb-20">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Tarım ve Tarımsal Üretim</h1>
+<p class="text-xl text-white opacity-90 font-light">Bitkinin kendisini dinleyen, hastalığı ve stresi kaynağında yakalayan akıllı üretim teknolojileri.</p>
+</div>
+</section>
+
+<!-- Content -->
+<section class="py-16">
+<div class="max-w-4xl mx-auto px-6">
+
+    <!-- Project: Yaprak Dedektif -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 border-t-4 border-secondary">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-green-50 text-secondary rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-leaf-line text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Stres Bazlı Sulama</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Yaprak Dedektif: Görüntü ve Termal Analizli Stres Bazlı Sulama</h2>
+            </div>
+        </div>
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <div class="bg-green-50 rounded-xl p-6 border-l-4 border-secondary shadow-sm">
+                <h3 class="text-secondary font-bold text-xl mb-2 flex items-center gap-2"><i class="ri-focus-2-line"></i> Hedef</h3>
+                <p>Toprak sensörlerine güvenmek yerine, <strong>doğrudan bitkinin fiziksel stres belirtilerini</strong> (yaprak kıvrılması, renk solması, yüzey ısınması) yapay zeka ile tespit edip, sadece gerçekten susamış bitki bölgelerini sulamak.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2"><i class="ri-error-warning-line text-red-500"></i> Problem</h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">"Tarlam taşlı ve engebeli, toprak nem sensörleri ya bozuluyor ya da yanlış yerden (örneğin sadece ıslak bir cepten) ölçüm yapıp 'toprak ıslak' diyor. Oysa bitki susuzluktan yapraklarını kıvırmaya başlamış. Sensöre güvenip sulamayınca ürünüm yanıyor, gereksiz yere her yeri sulayınca da mantar hastalığı ve su israfı oluyor."</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2"><i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-computer-line text-secondary mr-1"></i> Raspberry Pi</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-camera-lens-line text-primary mr-1"></i> Yüksek Çözünürlüklü Kamera</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-temp-hot-line text-red-500 mr-1"></i> Termal Sensör (MLX90614)</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-cpu-line text-primary mr-1"></i> Arduino</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-valve-line text-secondary mr-1"></i> Motorlu Solenoid Vana</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-sun-line text-yellow-500 mr-1"></i> Güneş Paneli & Pil</span>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2"><i class="ri-brain-line text-secondary text-3xl"></i> AI ile Adım Adım Çözüm</h3>
+                <ul class="space-y-8">
+                    <li class="flex gap-4"><div class="step-number shadow-md" style="background-color:#4CAF50;">1</div><div><strong class="text-gray-800 block mb-1 text-xl">Veri Toplama</strong><p class="text-gray-600">Sistem, günün en kritik saatlerinde (örneğin 13:00-15:00 arası, bitkinin en çok suya ihtiyaç duyduğu ve stresin en görünür olduğu zaman) otomatik olarak bitki yapraklarının yakın plan görüntüsünü alır ve aynı anda termal sensör ile yaprak yüzey sıcaklığını ölçer.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number shadow-md" style="background-color:#4CAF50;">2</div><div><strong class="text-gray-800 block mb-1 text-xl">Görsel Analiz (AI)</strong><p class="text-gray-600">Raspberry Pi üzerindeki hafif bir CNN modeli, yaprak kenarlarındaki kıvrılmayı, solgunluğu veya "Turgor basıncı" kaybını (bitkinin susuzluktan dik duramayıp sarkması) analiz eder.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number shadow-md" style="background-color:#4CAF50;">3</div><div><strong class="text-gray-800 block mb-1 text-xl">Termal Doğrulama (AI)</strong><p class="text-gray-600">AI, yaprak sıcaklığını ortam hava sıcaklığı ile karşılaştırır. Normalde sağlıklı bir bitki terleme ile kendini soğutur. Eğer yaprak sıcaklığı hava sıcaklığından belirgin şekilde yüksekse, AI bunu <em class="bg-yellow-50 px-1 rounded">"Stomalar kapandı, bitki ciddi su stresi altında"</em> olarak yorumlar.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number shadow-md" style="background-color:#4CAF50;">4</div><div><strong class="text-gray-800 block mb-1 text-xl">Ayırt Edici Karar (AI)</strong><p class="text-gray-600">AI, sadece görsel solgunluk varsa bunu "Hastalık veya Besin Eksikliği" olarak etiketleyebilir. Ancak <strong>Görsel Kıvrılma + Termal Isınma</strong> aynı anda tespit edilirse, bunu %95 doğrulukla "Susuzluk Stresi" olarak sınıflandırır ve <strong class="text-red-500">"Acil Sulama Gerekli"</strong> kararı verir.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number shadow-md" style="background-color:#4CAF50;">5</div><div><strong class="text-gray-800 block mb-1 text-xl">Aksiyon</strong><p class="text-gray-600">Arduino, sadece stres tespit edilen o spesifik sıra veya bölgeye ait motorlu vanayı açar ve hedeflenen sürede su verir. Diğer bölgeler kuru kalır (Su ve enerji tasarrufu).</p></div></li>
+                    <li class="flex gap-4"><div class="step-number shadow-md" style="background-color:#4CAF50;">6</div><div><strong class="text-gray-800 block mb-1 text-xl">Sonuç Doğrulama (Geri Bildirim)</strong><p class="text-gray-600">Sulamadan 2-3 saat sonra sistem tekrar görüntü alır. AI, yaprakların eski dik ve sağlıklı haline dönüp dönmediğini kontrol eder. Eğer dönmediyse, AI "Sulama işe yaramadı, boruda tıkanıklık veya kök hastalığı var" diye çiftçiye fotoğraflı bir uyarı gönderir.</p></div></li>
+                </ul>
+            </div>
+            <div class="mt-8 bg-gradient-to-r from-green-50 to-white border border-green-200 rounded-xl p-8 relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 opacity-10"><i class="ri-leaf-line text-[10rem] text-secondary"></i></div>
+                <div class="relative z-10">
+                    <p class="text-gray-800 font-semibold text-lg leading-relaxed flex gap-3"><i class="ri-double-quotes-l text-secondary text-3xl opacity-50"></i><span>Çiftçilerin en büyük şikayetlerinden biri "toprak sensörlerinin güvenilmezliğidir". Bu proje, <strong>"Toprağı değil, doğrudan bitkinin kendisini dinliyoruz"</strong> felsefesini yansıtır.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project: Drone ile Bitki Sağlığı Haritalama -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 border-t-4 border-teal-600">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-flight-takeoff-line text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-teal-600 font-semibold text-sm uppercase tracking-wider">Alan Ölçeğinde Tespit</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Tarlada Drone ile Bitki Sağlığı Haritalama</h2>
+            </div>
+        </div>
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <div class="bg-teal-50 rounded-xl p-6 border-l-4 border-teal-600 shadow-sm">
+                <h3 class="text-teal-700 font-bold text-xl mb-2 flex items-center gap-2"><i class="ri-focus-2-line"></i> Hedef</h3>
+                <p>Büyük tarla veya meyve bahçesinde, drone üzerinden çoklu spektral kamera ile bitki stresini ve hastalık yayılımını haritalamak.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2"><i class="ri-error-warning-line text-red-500"></i> Problem</h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">"200 dönümlük mısır tarlam var. Orta kısımdaki bitkiler sararıyor ama traktörle gidip kontrol edene kadar hastalık yarısına yayılmış oluyor. Hangi bölgede ne olduğunu anlayamıyorum, her yere aynı ilacı atıyorum. Üstten bakan bir gözüm olsa, nerede problem olduğunu hemen görebilsem."</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2"><i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-drone-line text-teal-600 mr-1"></i> DJI veya Benzeri Drone</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-camera-lens-line text-primary mr-1"></i> NDVI Kamera</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-camera-line text-secondary mr-1"></i> RGB Kamera</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-cpu-line text-primary mr-1"></i> Raspberry Pi / Jetson Nano</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-map-pin-line text-teal-600 mr-1"></i> RTK GPS Modülü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-battery-2-charge-line text-secondary mr-1"></i> Li-Po Batarya</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-computer-line text-primary mr-1"></i> Yer İstasyonu</span>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2"><i class="ri-brain-line text-teal-600 text-3xl"></i> AI ile Adım Adım Çözüm</h3>
+                <ul class="space-y-8">
+                    <li class="flex gap-4"><div class="step-number bg-teal-600 shadow-md">1</div><div><strong class="text-gray-800 block mb-1 text-xl">Uçuş Planı</strong><p class="text-gray-600">Çiftçi, tablet üzerinden tarla sınırlarını haritaya çizer. Drone, bu alanı "ızgara" deseninde, 50-100 metre yükseklikte, 80% örtüşme (overlap) ile otomatik tarar. RTK GPS sayesinde her görüntünün koordinatı cm hassasiyetle kaydedilir.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-600 shadow-md">2</div><div><strong class="text-gray-800 block mb-1 text-xl">Çoklu Spektral Görüntü Alma</strong><p class="text-gray-600">Drone uçarken eş zamanlı olarak iki kamera veri toplar:</p><div class="mt-3 space-y-3"><div class="bg-blue-50 border-l-4 border-primary rounded-r-lg p-4"><strong class="text-primary">NDVI Kamera (Kırmızı + NIR):</strong><p class="text-gray-600 mt-1">Bitkilerin klorofil miktarını ölçer. Sağlıklı bitki = yüksek NDVI (0.7-0.9). Stresli/hasta bitki = düşük NDVI (0.3-0.5). Ölü/çok hasta bitki = negatif NDVI.</p></div><div class="bg-green-50 border-l-4 border-secondary rounded-r-lg p-4"><strong class="text-secondary">RGB Kamera (Yüksek Çözünürlük):</strong><p class="text-gray-600 mt-1">Detaylı renk görüntüsü alır (yaprak lekeleri, renk değişimleri vb. için).</p></div></div></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-600 shadow-md">3</div><div><strong class="text-gray-800 block mb-1 text-xl">Gerçek Zamanlı Analiz (Edge AI)</strong><p class="text-gray-600">Jetson Nano üzerinde çalışan AI modeli, uçuş sırasında NDVI verisini analiz eder. Tarlanın her pikseli için "Sağlık Skoru" hesaplar. Anormal bölgeleri (düşük NDVI) anında işaretler.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-600 shadow-md">4</div><div><strong class="text-gray-800 block mb-1 text-xl">Hastalık / Yayılım Tespiti (AI)</strong><p class="text-gray-600">Uçuş tamamlandığında, yer istasyonuna indirilen görüntüler detaylı analize tabi tutulur:</p><div class="mt-3 space-y-3"><div class="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-4"><strong class="text-red-600">NDVI Anormallik Haritası:</strong><p class="text-gray-600 mt-1">AI, tarlanın sağlık haritasını oluşturur. Kırmızı alanlar = ciddi stres/hastalık, Sarı = orta stres, Yeşil = sağlıklı.</p></div><div class="bg-teal-50 border-l-4 border-teal-600 rounded-r-lg p-4"><strong class="text-teal-700">RGB Detay Analizi:</strong><p class="text-gray-600 mt-1">Kırmızı işaretlenen bölgelerin RGB görüntüleri, yaprak düzeyinde CNN modeline gönderilir. AI, bu bölgedeki sorunun nedenini sınıflandırır:</p><ul class="mt-2 space-y-1 list-disc list-inside text-gray-600"><li><strong>Hastalık mı?</strong> (Rust - Pas, Blight, Smut - Kara hastalık)</li><li><strong>Besin eksikliği mi?</strong> (Azot eksikliği = sarıma, Fosfor = morumsu, Potasyum = kenar yanıklığı)</li><li><strong>Su stresi mi?</strong> (Kuraklık = bütün yaprak solgun)</li><li><strong>Yabani ot baskısı mı?</strong> (Segmentasyon ile ayırır)</li></ul></div></div></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-600 shadow-md">5</div><div><strong class="text-gray-800 block mb-1 text-xl">Yayılım Analizi</strong><p class="text-gray-600">AI, birden fazla uçuşun verisini (örneğin haftalık) karşılaştırır. <em class="bg-yellow-50 px-1 rounded">"A-Bloğu'ndaki düşük NDVI alanı geçen hafta 5 dönümdü, bu hafta 12 dönüme yayılmış. Yayılım hızı: %140. Acil müdahale gerekli."</em></p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-600 shadow-md">6</div><div><strong class="text-gray-800 block mb-1 text-xl">Reçete Üretimi</strong><p class="text-gray-600">AI, tespit edilen soruna ve alana özel ilaç/gübre önerisi üretir:</p><div class="mt-3 space-y-3"><div class="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-4 text-gray-600"><strong class="text-red-600">Bölge-A (12 dönüm):</strong> Mısır pas hastalığı (Common Rust) tespit edildi. Öneri: Propiconazole içerikli fungisit. Doz: 300ml/dönüm. Uygulama: Sadece Bölge-A, diğer bölgeler sağlıklı.</div><div class="bg-amber-50 border-l-4 border-amber-500 rounded-r-lg p-4 text-gray-600"><strong class="text-amber-600">Bölge-C (8 dönüm):</strong> Azot eksikliği belirtileri. Öneri: Üre gübresi, 15kg/dönüm.</div></div></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-600 shadow-md">7</div><div><strong class="text-gray-800 block mb-1 text-xl">Değişken Oranlı Uygulama (VRA)</strong><p class="text-gray-600">AI üretilen harita, traktörün GPS'ine yüklenir. Traktör, sağlıklı bölgelerden geçerken ilaç püskürtmez, sadece hasta bölgelere uygulama yapar. Bu sayede <strong class="text-secondary">%30-50 ilaç tasarrufu</strong> sağlanır.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-600 shadow-md">8</div><div><strong class="text-gray-800 block mb-1 text-xl">Zaman Serisi ve Tahmin</strong><p class="text-gray-600">AI, sezon boyunca haftalık uçuş verilerini depolar. <em class="bg-yellow-50 px-1 rounded">"Geçen yıl bu tarihlerde aynı bölgede pas hastalığı başlamıştı. Bu yıl hava koşulları benzer. Önleyici tarama önerisi: 3 gün sonra."</em></p></div></li>
+                </ul>
+            </div>
+            <div class="mt-8 bg-gradient-to-r from-teal-50 to-white border border-teal-200 rounded-xl p-8 relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 opacity-10"><i class="ri-flight-takeoff-line text-[10rem] text-teal-600"></i></div>
+                <div class="relative z-10"><p class="text-gray-800 font-semibold text-lg leading-relaxed flex gap-3"><i class="ri-double-quotes-l text-teal-600 text-3xl opacity-50"></i><span>Her yere aynı ilacı atmak yerine, <strong>"sadece hasta bölgeye, sadece ihtiyacı kadar"</strong> uygulama felsefesini yansıtır. Üstten bakan bir göz, hastalığı yarısına yayılmadan önce yakalar.</span></p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project: Bahçe Don Kalkanı -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 border-t-4 border-teal-500">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-teal-50 text-teal-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-snowy-line text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-teal-500 font-semibold text-sm uppercase tracking-wider">Mikro-Klima ve Erken Uyarı</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Bahçe Don Kalkanı</h2>
+                <p class="text-gray-500 text-sm mt-1">Meyve bahçesi üretim koruması</p>
+            </div>
+        </div>
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <div class="bg-teal-50 rounded-xl p-6 border-l-4 border-teal-500 shadow-sm">
+                <h3 class="text-teal-600 font-bold text-xl mb-2 flex items-center gap-2"><i class="ri-focus-2-line"></i> Hedef</h3>
+                <p>İlkbahardaki ani don olaylarında, çiçekler donmadan önce mikro-klima oluşturmak (sulama veya hava akımı) için otomatik müdahale etmek.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2"><i class="ri-error-warning-line text-red-500"></i> Problem</h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">"İlkbaharda meyve ağaçları çiçek açtı. Gece aniden hava sıfırın altına düştü. Rüzgar pervanesi yakmak veya sulama yapmak için uyanana kadar çiçekler donup kararıyor, tüm sezonu yakıyorum."</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2"><i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Arduino</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">DHT22 Sensörler</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Rüzgar Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Raspberry Pi</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Motorlu Vana</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Röleler</span>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2"><i class="ri-brain-line text-teal-500 text-3xl"></i> AI ile Adım Adım Çözüm</h3>
+                <ul class="space-y-6">
+                    <li class="flex gap-4"><div class="step-number bg-teal-500 shadow-md">1</div><div><strong class="text-gray-800 block mb-1 text-xl">Çiğ Noktası Hesaplama</strong>Sıcaklık ve nem sensörlerinden gelen verilerle AI anlık "Çiğ Noktası" (Dew Point) sıcaklığını hesaplar.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-500 shadow-md">2</div><div><strong class="text-gray-800 block mb-1 text-xl">Tahmin Modeli</strong>Basit bir regresyon modeli, "Hava şu an 2 derece ama 45 dakika içinde 0 derecenin altına inecek" tahminini yapar.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-500 shadow-md">3</div><div><strong class="text-gray-800 block mb-1 text-xl">Rüzgar Analizi</strong>Rüzgar sensöründen gelen veriye bakılır. Eğer rüzgar yoksa "soğuk hava göllenmesi" riski vardır.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-500 shadow-md">4</div><div><strong class="text-gray-800 block mb-1 text-xl">Karar Verme (Koruma Modu)</strong>AI, don riskini %90'ın üzerinde görürse, sıcaklık 0'a düşmeden koruma modunu başlatır.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-500 shadow-md">5</div><div><strong class="text-gray-800 block mb-1 text-xl">Aksiyon</strong>Motorlu vanayı açarak ağaçların üzerine ince bir su tabakası sıkar (izolasyon buz kalkanı oluşturur) veya ısıtıcıları devreye sokar.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-teal-500 shadow-md">6</div><div><strong class="text-gray-800 block mb-1 text-xl">Sonuç</strong>AI'ın müdahalesi sayesinde çiçeklerin buzun altında sağ kaldığı fark edilir.</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- Simple Footer -->
+<footer class="bg-gray-900 text-white py-12 mt-4">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<div class="font-['Pacifico'] text-3xl text-primary mb-4">AgriMind</div>
+<p class="text-gray-400 mb-6">Elektronik, robotik ve yapay zeka ile tarımda akıllı çözümler geliştiriyoruz.</p>
+<p class="text-gray-500 text-sm">© 2024 AgriMind. Tüm hakları saklıdır.</p>
+</div>
+</footer>
+
+</body>
+</html>

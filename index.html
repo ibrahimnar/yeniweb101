@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriMind - Tarlana Akıl Ver</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2196F3',
+secondary: '#4CAF50'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+},
+fontFamily: {
+'heading': ['Poppins', 'sans-serif'],
+'body': ['Open Sans', 'sans-serif'],
+'logo': ['Pacifico', 'serif']
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+body {
+font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Poppins', sans-serif;
+}
+.hero-overlay {
+background: linear-gradient(135deg, rgba(33, 150, 243, 0.7) 0%, rgba(76, 175, 80, 0.7) 100%);
+}
+.gradient-bg {
+background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%);
+}
+.card-hover {
+transition: all 0.3s ease;
+}
+.card-hover:hover {
+transform: translateY(-8px);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.smooth-scroll {
+scroll-behavior: smooth;
+}
+.tech-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.25rem;
+padding: 0.25rem 0.75rem;
+border-radius: 9999px;
+font-size: 0.75rem;
+font-weight: 600;
+}
+</style>
+</head>
+<body class="smooth-scroll">
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<div class="font-['Pacifico'] text-3xl text-primary">AgriMind</div>
+<div class="hidden md:flex items-center gap-8">
+<a href="#home" class="text-gray-700 hover:text-primary transition">Ana Sayfa</a>
+<a href="#about" class="text-gray-700 hover:text-primary transition">Hakkımızda</a>
+<a href="#principles" class="text-gray-700 hover:text-primary transition">Prensipler</a>
+<a href="#projects" class="text-gray-700 hover:text-primary transition">Projeler</a>
+<a href="#sectors" class="text-gray-700 hover:text-primary transition">Odak Alanlar</a>
+<a href="#contact" class="text-gray-700 hover:text-primary transition">İletişim</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-2xl text-gray-700"></i>
+</button>
+</div>
+</nav>
+<section id="home" class="relative h-screen overflow-hidden">
+<div class="absolute inset-0">
+<img src="assets/images/hero_bg.png" alt="Agricultural Fields" class="w-full h-full object-cover object-center">
+</div>
+<div class="hero-overlay absolute inset-0 flex items-center justify-center">
+<div class="text-center text-white px-6 max-w-4xl">
+<div class="font-['Pacifico'] text-6xl md:text-7xl mb-6">AgriMind</div>
+<h1 class="text-4xl md:text-6xl font-bold mb-6">Mind Your Fields</h1>
+<p class="text-xl md:text-2xl mb-8 font-light">Tarlana Akıl Ver</p>
+<p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto">Elektronik, Robotik ve Yapay Zeka ile Tarımda Akıllı Çözümler</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="#projects" class="gradient-bg text-white px-8 py-4 !rounded-button font-semibold text-lg hover:opacity-90 transition whitespace-nowrap">Projelerimizi Keşfedin</a>
+<a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-4 !rounded-button font-semibold text-lg hover:bg-white hover:text-primary transition whitespace-nowrap">Bize Ulaşın</a>
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4">Hakkımızda</h2>
+<p class="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">Gerçek sorunlar, gerçek çözümler - teknoloji ile tarımı insan ve doğa odaklı hale getiriyoruz.</p>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6 text-gray-700 leading-relaxed text-lg">
+<p>
+AgriMind'ın kuruluş hikayesi, tarlalarda ve seralarda gördüğümüz zorluklardan ve verim kayıplarından başladı. Yıllarca tarım ve teknoloji sektörlerini incelerken, geleneksel yöntemlerin artan maliyetler ve iklim değişiklikleri karşısında ne kadar yorulduğunu gördük. Bu deneyimle, yapay zekayı ve robotiği sadece teknik araçlar olarak değil, üreticimizin en değerli ortağı olarak görmeye başladık.
+</p>
+<p>
+Bugün, ekibimizle birlikte her arazinin ve seranın benzersiz ihtiyaçlarını anlamak ve ona özel akıllı çözümler üretmek için çalışıyoruz. Karmaşık teknolojileri bilmeniz veya kod yazmanız gerekmiyor; sadece sahadaki sorunlarınızı bize anlatın, biz geri kalanını hallederiz.
+</p>
+<p>
+Her müşteri ilişkisini uzun süreli bir ortaklık olarak görüyoruz. İlk analizimiz her zaman ücretsiz çünkü sahada gerçek bir değer ve verim artışı oluşturmadan önce sizin güveninizi kazanmayı tercih ediyoruz.
+</p>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg h-full min-h-[400px] relative">
+<img src="assets/images/about_us.png" alt="AgriMind Ekibi" class="absolute inset-0 w-full h-full object-cover">
+</div>
+</div>
+</div>
+</section>
+<section id="principles" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4">Teknoloji Prensiplerimiz</h2>
+<p class="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">Her teknoloji bileşeni, akıllı tarım çözümlerimizde özel bir rol oynar</p>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white rounded-xl p-8 shadow-lg card-hover border-t-4 border-primary">
+<div class="w-20 h-20 flex items-center justify-center bg-blue-50 rounded-xl mb-6 mx-auto">
+<i class="ri-cpu-line text-5xl text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Arduino<br>Kas ve Refleksleri Temsil Eder</h3>
+<p class="text-gray-600 text-center leading-relaxed">Sensörlerden ham veriyi okur, motorları çalıştırır. Hızlı, basit ve ekonomik</p>
+<div class="mt-6 pt-6 border-t border-gray-200">
+<div class="flex items-center justify-center gap-2 text-primary font-semibold">
+<i class="ri-flashlight-line text-xl"></i>
+<span>Hızlı Tepki</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-8 shadow-lg card-hover border-t-4 border-teal-500">
+<div class="w-20 h-20 flex items-center justify-center bg-teal-50 rounded-xl mb-6 mx-auto">
+<i class="ri-brain-line text-5xl text-teal-600"></i>
+</div>
+<h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Raspberry Pi<br>Beyini Temsil Eder</h3>
+<p class="text-gray-600 text-center leading-relaxed">Görüntü işleme yapar, AI modellerini çalıştırır. Güçlü ve akıllı</p>
+<div class="mt-6 pt-6 border-t border-gray-200">
+<div class="flex items-center justify-center gap-2 text-teal-600 font-semibold">
+<i class="ri-eye-line text-xl"></i>
+<span>Görüntü İşleme</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-8 shadow-lg card-hover border-t-4 border-secondary">
+<div class="w-20 h-20 flex items-center justify-center bg-green-50 rounded-xl mb-6 mx-auto">
+<i class="ri-robot-2-line text-5xl text-secondary"></i>
+</div>
+<h3 class="text-2xl font-bold text-center mb-4 text-gray-800">AI<br>Karar Vericidir</h3>
+<p class="text-gray-600 text-center leading-relaxed">Görüntü işleme ile kameradan gelen verileri analiz eder, zaman serisi analizi ile geleceği tahmin eder</p>
+<div class="mt-6 pt-6 border-t border-gray-200">
+<div class="flex items-center justify-center gap-2 text-secondary font-semibold">
+<i class="ri-lightbulb-line text-xl"></i>
+<span>Akıllı Karar</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="projects" class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4">Örnek Projelerimiz</h2>
+<p class="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">Gerçek problemler, AI destekli akıllı çözümler</p>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+<div class="relative h-56">
+<img src="assets/images/project_1.png" alt="Akıllı Sulama Sistemi" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="tech-badge bg-primary text-white">Arduino</span>
+<span class="tech-badge bg-secondary text-white">Sensör</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Akıllı Sulama Sistemi</h3>
+<p class="text-gray-600 mb-4 leading-relaxed">Toprak nem sensörleri ile otomatik sulama kontrolü. Su tasarrufu sağlar ve bitki sağlığını optimize eder.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-cpu-line text-lg text-primary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-green-50 rounded-full">
+<i class="ri-temp-hot-line text-lg text-secondary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-water-flash-line text-lg text-primary"></i>
+</div>
+</div>
+<a href="Sulama101.html" class="inline-block gradient-bg text-white px-6 py-3 !rounded-button font-semibold hover:opacity-90 transition whitespace-nowrap">Detayları Gör</a>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+<div class="relative h-56">
+<img src="assets/images/project_2.png" alt="Hastalık Tespit Sistemi" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="tech-badge bg-teal-600 text-white">Raspberry Pi</span>
+<span class="tech-badge bg-secondary text-white">AI</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Bitki Hastalık Tespit Sistemi</h3>
+<p class="text-gray-600 mb-4 leading-relaxed">Kamera ve AI ile bitki hastalıklarını erken tespit eder. Zamanında müdahale imkanı sağlar.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<div class="w-8 h-8 flex items-center justify-center bg-teal-50 rounded-full">
+<i class="ri-brain-line text-lg text-teal-600"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-green-50 rounded-full">
+<i class="ri-camera-line text-lg text-secondary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-teal-50 rounded-full">
+<i class="ri-eye-line text-lg text-teal-600"></i>
+</div>
+</div>
+<a href="bitki-hastalik.html" class="inline-block gradient-bg text-white px-6 py-3 !rounded-button font-semibold hover:opacity-90 transition whitespace-nowrap">Detayları Gör</a>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+<div class="relative h-56">
+<img src="assets/images/project_3.png" alt="GPS Takip Sistemi" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="tech-badge bg-primary text-white">GPS</span>
+<span class="tech-badge bg-teal-600 text-white">IoT</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Tarım Makinası Takip Sistemi</h3>
+<p class="text-gray-600 mb-4 leading-relaxed">GPS ile tarım makinalarının konumunu izler. Verimli rota planlaması ve yakıt tasarrufu sağlar.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-map-pin-line text-lg text-primary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-teal-50 rounded-full">
+<i class="ri-route-line text-lg text-teal-600"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-dashboard-line text-lg text-primary"></i>
+</div>
+</div>
+<a href="makina-takip.html" class="inline-block gradient-bg text-white px-6 py-3 !rounded-button font-semibold hover:opacity-90 transition whitespace-nowrap">Detayları Gör</a>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+<div class="relative h-56">
+<img src="assets/images/project_4.png" alt="Sera İklim Kontrol" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="tech-badge bg-primary text-white">Arduino</span>
+<span class="tech-badge bg-secondary text-white">Otomasyon</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Sera İklim Kontrol Sistemi</h3>
+<p class="text-gray-600 mb-4 leading-relaxed">Sıcaklık, nem ve ışık sensörleri ile sera ortamını otomatik kontrol eder. Optimal büyüme koşulları sağlar.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-temp-cold-line text-lg text-primary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-green-50 rounded-full">
+<i class="ri-contrast-drop-line text-lg text-secondary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-sun-line text-lg text-primary"></i>
+</div>
+</div>
+<a href="sera.html" class="inline-block gradient-bg text-white px-6 py-3 !rounded-button font-semibold hover:opacity-90 transition whitespace-nowrap">Detayları Gör</a>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+<div class="relative h-56">
+<img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80" alt="Otonom Tarım Robotu" class="w-full h-full object-cover object-center">
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="tech-badge bg-teal-600 text-white">Raspberry Pi</span>
+<span class="tech-badge bg-secondary text-white">AI</span>
+<span class="tech-badge bg-primary text-white">GPS</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Otonom Tarım Robotu</h3>
+<p class="text-gray-600 mb-4 leading-relaxed">GPS ve AI destekli otonom robot. Ot temizleme, ilaçlama ve hasat işlemlerini otomatik gerçekleştirir.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<div class="w-8 h-8 flex items-center justify-center bg-teal-50 rounded-full">
+<i class="ri-robot-2-line text-lg text-teal-600"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-green-50 rounded-full">
+<i class="ri-navigation-line text-lg text-secondary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-steering-line text-lg text-primary"></i>
+</div>
+</div>
+<a href="robot.html" class="inline-block gradient-bg text-white px-6 py-3 !rounded-button font-semibold hover:opacity-90 transition whitespace-nowrap">Detayları Gör</a>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+<div class="relative h-56">
+<img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80" alt="Hava Durumu Tahmin Sistemi" class="w-full h-full object-cover object-center">
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="tech-badge bg-secondary text-white">AI</span>
+<span class="tech-badge bg-primary text-white">Sensör</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Hava Durumu Tahmin Sistemi</h3>
+<p class="text-gray-600 mb-4 leading-relaxed">AI ile yerel hava durumu tahmini. Tarımsal faaliyetler için en uygun zamanları belirler.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<div class="w-8 h-8 flex items-center justify-center bg-green-50 rounded-full">
+<i class="ri-cloud-line text-lg text-secondary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-rainy-line text-lg text-primary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-green-50 rounded-full">
+<i class="ri-line-chart-line text-lg text-secondary"></i>
+</div>
+</div>
+<a href="hava-tahmin.html" class="inline-block gradient-bg text-white px-6 py-3 !rounded-button font-semibold hover:opacity-90 transition whitespace-nowrap">Detayları Gör</a>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+<div class="relative h-56">
+<img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&q=80" alt="Drone ile Arazi Analizi" class="w-full h-full object-cover object-center">
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="tech-badge bg-primary text-white">Drone</span>
+<span class="tech-badge bg-secondary text-white">AI</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Drone ile Arazi Analizi</h3>
+<p class="text-gray-600 mb-4 leading-relaxed">Yüksek çözünürlüklü drone kameraları ile tarım arazinizin topografik ve bitki örtüsü analizini gerçekleştirir. Hassas tarım için kritik veriler sağlar.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-flight-takeoff-line text-lg text-primary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-green-50 rounded-full">
+<i class="ri-landscape-line text-lg text-secondary"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full">
+<i class="ri-radar-line text-lg text-primary"></i>
+</div>
+</div>
+<a href="drone.html" class="inline-block gradient-bg text-white px-6 py-3 !rounded-button font-semibold hover:opacity-90 transition whitespace-nowrap">Detayları Gör</a>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover border-t-4 border-gray-400">
+<div class="relative h-56">
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80" alt="Diğer İnovatif Projeler" class="w-full h-full object-cover object-center">
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="tech-badge bg-gray-600 text-white">Çeşitli</span>
+<span class="tech-badge bg-gray-500 text-white">Konseptler</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-800 mb-3">Diğer İnovatif Projeler</h3>
+<p class="text-gray-600 mb-4 leading-relaxed">Sınıflandırma aşamasında olan, traktör, ahır, sera ve hasat sonrası için geliştirdiğimiz akıllı donanım ve yazılım konseptleri.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-tractor-line text-lg text-gray-600"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-home-4-line text-lg text-gray-600"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-shape-line text-lg text-gray-600"></i>
+</div>
+</div>
+<a href="sinifsiz.html" class="inline-block bg-gray-800 text-white px-6 py-3 !rounded-button font-semibold hover:bg-gray-700 transition whitespace-nowrap">Detayları Gör</a>
+</div>
+</div>
+</div>
+<div class="mt-16 bg-gradient-to-r from-blue-50 to-white border border-blue-100 rounded-2xl p-8 md:p-10 shadow-sm relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5 pointer-events-none">
+<i class="ri-cpu-line text-[15rem] text-primary"></i>
+</div>
+<div class="relative z-10 max-w-4xl">
+<h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-3">
+<i class="ri-wifi-off-line text-primary text-3xl"></i>
+İnternet Yok mu? Sorun Değil: Edge AI
+</h3>
+<p class="text-gray-700 leading-relaxed text-lg mb-3">
+Bu projelerin hepsi <strong class="text-primary">"Edge AI"</strong> <em>(Yapay zekanın bulutta değil, cihazın kendi çipinde çalışması)</em> mantığına dayanır.
+</p>
+<p class="text-gray-700 leading-relaxed text-lg">
+Tarlalar ve köyler her zaman stabil internete sahip değildir. Raspberry Pi veya NVIDIA Jetson gibi kartlara hafifletilmiş modeller (TensorFlow Lite, Edge Impulse) kurarak <strong>internet kesilse bile sistemin çalışmaya devam etmesi sağlanır.</strong>
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sectors" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4">Odak Alanlarımız</h2>
+<p class="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">Tarımın her alanında teknoloji destekli çözümler sunuyoruz</p>
+<div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+<a href="tarimsal-uretim.html" class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 text-center card-hover border border-gray-100 hover:shadow-lg transition block">
+<div class="w-16 h-16 flex items-center justify-center bg-white rounded-full mb-4 mx-auto shadow-md">
+<i class="ri-plant-line text-4xl text-secondary"></i>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-2">Tarım ve Tarımsal Üretim</h3>
+<p class="text-sm text-gray-600">Akıllı tarım teknolojileri</p>
+</a>
+<a href="tarimsal-otomasyon.html" class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 text-center card-hover border border-gray-100 hover:shadow-lg transition block">
+<div class="w-16 h-16 flex items-center justify-center bg-white rounded-full mb-4 mx-auto shadow-md">
+<i class="ri-truck-line text-4xl text-primary"></i>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-2">Tarım Makinaları ve Otomasyon</h3>
+<p class="text-sm text-gray-600">Makina takip ve kontrol</p>
+</a>
+<a href="arazi-yonetim.html" class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 text-center card-hover border border-gray-100 hover:shadow-lg transition block">
+<div class="w-16 h-16 flex items-center justify-center bg-white rounded-full mb-4 mx-auto shadow-md">
+<i class="ri-landscape-line text-4xl text-secondary"></i>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-2">Tarım Arazileri Yönetimi</h3>
+<p class="text-sm text-gray-600">Arazi analizi ve planlama</p>
+</a>
+<a href="tarimsal-binalar.html" class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 text-center card-hover border border-gray-100 hover:shadow-lg transition block">
+<div class="w-16 h-16 flex items-center justify-center bg-white rounded-full mb-4 mx-auto shadow-md">
+<i class="ri-home-4-line text-4xl text-primary"></i>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-2">Tarımsal Binalar ve Konutlar</h3>
+<p class="text-sm text-gray-600">Akıllı bina sistemleri</p>
+</a>
+<a href="inovatif.html" class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 text-center card-hover border border-gray-100 hover:shadow-lg transition block">
+<div class="w-16 h-16 flex items-center justify-center bg-white rounded-full mb-4 mx-auto shadow-md">
+<i class="ri-user-heart-line text-4xl text-secondary"></i>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-2">Çiftçi İhtiyaçları ve Çözümleri</h3>
+<p class="text-sm text-gray-600">Özel çözüm geliştirme</p>
+</a>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">Neler Yapabiliriz?</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="bg-white rounded-xl p-8 shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-50 rounded-xl mb-6">
+<i class="ri-tools-line text-4xl text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-6">Donanım</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-secondary"></i>
+</div>
+<span class="text-gray-700">Arduino tabanlı sensör sistemleri</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-secondary"></i>
+</div>
+<span class="text-gray-700">Raspberry Pi ile görüntü işleme</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-secondary"></i>
+</div>
+<span class="text-gray-700">GPS entegrasyonu</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-secondary"></i>
+</div>
+<span class="text-gray-700">Hazır robotik kitler</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-secondary"></i>
+</div>
+<span class="text-gray-700">Çeşitli elektronik komponentler</span>
+</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl p-8 shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center bg-green-50 rounded-xl mb-6">
+<i class="ri-code-line text-4xl text-secondary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-6">Yazılım</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-primary"></i>
+</div>
+<span class="text-gray-700">AI model geliştirme ve eğitim</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-primary"></i>
+</div>
+<span class="text-gray-700">Gerçek zamanlı veri analizi</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-primary"></i>
+</div>
+<span class="text-gray-700">IoT (Nesnelerin İnterneti) çözümleri</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-primary"></i>
+</div>
+<span class="text-gray-700">Otomasyon sistemleri</span>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+<i class="ri-checkbox-circle-fill text-xl text-primary"></i>
+</div>
+<span class="text-gray-700">Custom proje geliştirme</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="gradient-bg py-24">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="text-4xl md:text-5xl font-bold text-center text-white mb-4">Projeniz İçin Birlikte Çalışalım</h2>
+<p class="text-center text-white text-lg mb-12 opacity-90">Tarımınıza akıl vermek için sizinle tanışmayı bekliyoruz</p>
+<div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl">
+<form class="space-y-6">
+<div>
+<label class="block text-gray-700 font-semibold mb-2">Ad Soyad</label>
+<input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Adınız ve soyadınız">
+</div>
+<div>
+<label class="block text-gray-700 font-semibold mb-2">E-posta</label>
+<input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="ornek@email.com">
+</div>
+<div>
+<label class="block text-gray-700 font-semibold mb-2">Telefon</label>
+<input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="+90 5XX XXX XX XX">
+</div>
+<div>
+<label class="block text-gray-700 font-semibold mb-2">Proje Detayı</label>
+<textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none" placeholder="Projeniz hakkında detaylı bilgi verin..."></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-8 py-4 !rounded-button font-bold text-lg hover:bg-blue-600 hover:shadow-lg transition">Aklınızdakini Yazın, Konuşalım</button>
+<p class="text-sm text-gray-500 mt-4 text-center leading-relaxed"><strong>Önemli Not:</strong> İlk analizimiz tamamen ücretsizdir ve sadece size değer sağlamak için hazırlanmıştır. Hiçbir taahhüt gerektirmez - sadece fırsatları keşfedin, uygunsa birlikte ilerleyelim.</p>
+</form>
+<div class="mt-12 pt-8 border-t border-gray-200">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-50 rounded-full flex-shrink-0">
+<i class="ri-mail-line text-2xl text-primary"></i>
+</div>
+<div>
+<div class="text-sm text-gray-500">E-posta</div>
+<div class="font-semibold text-gray-800">info@agrimind.com</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-green-50 rounded-full flex-shrink-0">
+<i class="ri-phone-line text-2xl text-secondary"></i>
+</div>
+<div>
+<div class="text-sm text-gray-500">Telefon</div>
+<div class="font-semibold text-gray-800">+90 555 123 45 67</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center gap-4 mt-8">
+<a href="#" class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition">
+<i class="ri-linkedin-fill text-2xl"></i>
+</a>
+<a href="#" class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition">
+<i class="ri-twitter-x-fill text-2xl"></i>
+</a>
+<a href="#" class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition">
+<i class="ri-instagram-fill text-2xl"></i>
+</a>
+<a href="#" class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition">
+<i class="ri-youtube-fill text-2xl"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-3 gap-12 mb-12">
+<div>
+<div class="font-['Pacifico'] text-3xl text-primary mb-4">AgriMind</div>
+<p class="text-gray-400 leading-relaxed">Elektronik, robotik ve yapay zeka ile tarımda akıllı çözümler geliştiriyoruz. Tarlana akıl ver.</p>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Hızlı Linkler</h4>
+<ul class="space-y-2">
+<li><a href="#home" class="text-gray-400 hover:text-white transition">Ana Sayfa</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition">Hakkımızda</a></li>
+<li><a href="#principles" class="text-gray-400 hover:text-white transition">Prensipler</a></li>
+<li><a href="#projects" class="text-gray-400 hover:text-white transition">Projeler</a></li>
+<li><a href="#sectors" class="text-gray-400 hover:text-white transition">Sektörler</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition">İletişim</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">İletişim</h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<i class="ri-mail-line text-xl text-primary"></i>
+<span class="text-gray-400">info@agrimind.com</span>
+</li>
+<li class="flex items-center gap-3">
+<i class="ri-phone-line text-xl text-secondary"></i>
+<span class="text-gray-400">+90 555 123 45 67</span>
+</li>
+<li class="flex items-center gap-3">
+<i class="ri-map-pin-line text-xl text-primary"></i>
+<span class="text-gray-400">İstanbul, Türkiye</span>
+</li>
+</ul>
+<div class="flex gap-3 mt-6">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-linkedin-fill text-xl"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-twitter-x-fill text-xl"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+<i class="ri-instagram-fill text-xl"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+<p>© 2024 AgriMind. Tüm hakları saklıdır.</p>
+</div>
+</div>
+</footer>
+<script id="smooth-scroll-handler">
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if(target) {
+const navHeight = 80;
+const targetPosition = target.offsetTop - navHeight;
+window.scrollTo({
+top: targetPosition,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+<script id="mobile-menu-handler">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('nav button');
+const navLinks = document.querySelector('nav .hidden.md\\:flex');
+if(menuButton && navLinks) {
+menuButton.addEventListener('click', function() {
+navLinks.classList.toggle('hidden');
+navLinks.classList.toggle('flex');
+navLinks.classList.toggle('flex-col');
+navLinks.classList.toggle('absolute');
+navLinks.classList.toggle('top-full');
+navLinks.classList.toggle('left-0');
+navLinks.classList.toggle('right-0');
+navLinks.classList.toggle('bg-white');
+navLinks.classList.toggle('shadow-lg');
+navLinks.classList.toggle('p-6');
+});
+}
+});
+</script>
+</body>
+</html>

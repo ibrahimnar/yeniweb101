@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarımsal Binalar ve Konutlar - AgriMind</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: { primary: '#2196F3', secondary: '#4CAF50' },
+borderRadius: { 'none': '0px','sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' },
+fontFamily: { 'heading': ['Poppins', 'sans-serif'], 'body': ['Open Sans', 'sans-serif'], 'logo': ['Pacifico', 'serif'] }
+}
+}
+}
+</script>
+<style>
+body { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+.gradient-bg { background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%); }
+.step-number { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 9999px; color: white; font-weight: bold; flex-shrink: 0; }
+</style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<a href="index.html" class="font-['Pacifico'] text-3xl text-primary hover:opacity-80 transition">AgriMind</a>
+<div class="flex items-center gap-8">
+<a href="index.html" class="text-gray-700 hover:text-primary transition flex items-center gap-2 font-semibold"><i class="ri-arrow-left-line"></i> Ana Sayfaya Dön</a>
+</div>
+</div>
+</nav>
+
+<!-- Page Header -->
+<section class="gradient-bg pt-32 pb-20">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Tarımsal Binalar ve Konutlar</h1>
+<p class="text-xl text-white opacity-90 font-light">Sera, ahır, depo ve kırsal konutlar için akıllı bina ve iklim sistemleri.</p>
+</div>
+</section>
+
+<!-- Content -->
+<section class="py-16">
+<div class="max-w-4xl mx-auto px-6">
+
+    <!-- Project: Akıllı Sera İklim ve Erken Uyarı Sistemi -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 border-t-4 border-emerald-600">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-home-4-line text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Kapalı Alan İklim Kontrolü</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Akıllı Sera İklim ve Erken Uyarı Sistemi</h2>
+            </div>
+        </div>
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <div class="bg-emerald-50 rounded-xl p-6 border-l-4 border-emerald-600 shadow-sm">
+                <h3 class="text-emerald-700 font-bold text-xl mb-2 flex items-center gap-2"><i class="ri-focus-2-line"></i> Hedef</h3>
+                <p>Sera içindeki sıcaklık, nem, CO2 ve toprak ıslaklığı gibi kritik değerleri takip etmek; bitkinin strese girmesini veya hastalık kapmasını AI yardımıyla önceden engelleyip otomasyonu (havalandırma, sulama) yönetmek.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2"><i class="ri-error-warning-line text-red-500"></i> Problem</h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">"Sera işi bıçak sırtı. Gece aniden ayaz yapıyor, içeriye gidip havalandırmayı kapatana kadar fideleri soğuk vuruyor. Ya da içerisi aşırı nemli kalıyor, mantar hastalığı bir başlıyor, tüm domatesler çürüyor. Hangi saatte ne kadar sulayacağımı, fanları ne zaman açacağımı kestiremiyorum."</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2"><i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-computer-line text-emerald-600 mr-1"></i> Raspberry Pi</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-cpu-line text-primary mr-1"></i> ESP32</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-temp-hot-line text-emerald-600 mr-1"></i> DHT22</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-water-percent-line text-primary mr-1"></i> Toprak Nemi Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-windy-line text-emerald-600 mr-1"></i> CO2 Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-sun-line text-yellow-500 mr-1"></i> LDR (Işık Sensörü)</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-toggle-line text-primary mr-1"></i> Röle Kartı</span>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2"><i class="ri-brain-line text-emerald-600 text-3xl"></i> AI ile Adım Adım Çözüm</h3>
+                <ul class="space-y-8">
+                    <li class="flex gap-4"><div class="step-number bg-emerald-600 shadow-md">1</div><div><strong class="text-gray-800 block mb-1 text-xl">Veri Toplama</strong><p class="text-gray-600">Sera içindeki farklı noktalara yerleştirilen ESP32'ler, sıcaklık, hava nemi, toprak nemi ve CO2 seviyelerini ölçerek Wi-Fi üzerinden Raspberry Pi'ye gönderir.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-emerald-600 shadow-md">2</div><div><strong class="text-gray-800 block mb-1 text-xl">Çiy Noktası ve Hastalık Risk Analizi (AI)</strong><p class="text-gray-600">Raspberry Pi üzerinde çalışan bir makine öğrenmesi modeli (Örn: Regresyon modelleri), sıcaklık ve nem trendlerini analiz eder. Yapraklarda mantar oluşmasına sebep olacak "çiy noktası" (dew point) riskini 2 saat önceden tahmin eder.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-emerald-600 shadow-md">3</div><div><strong class="text-gray-800 block mb-1 text-xl">Akıllı Tepki ve Otomasyon</strong><p class="text-gray-600">Klasik sistemler gibi sadece "sıcaklık 30 dereceyi geçince fanı aç" demez. AI, dış ortam verilerini de hesaba katarak en optimum kararı verir:</p><div class="mt-3 space-y-3"><div class="bg-emerald-50 border-l-4 border-emerald-600 rounded-r-lg p-4 text-gray-600"><strong class="text-emerald-600">Karar 1:</strong> "İçeride nem %85'e ulaştı ve sıcaklık düşüyor, mantar riski %92. Pencereleri %20 aç, iç sirkülasyon fanını çalıştır."</div><div class="bg-amber-50 border-l-4 border-amber-500 rounded-r-lg p-4 text-gray-600"><strong class="text-amber-600">Karar 2:</strong> "Toprak nemi düşük ama güneş batmak üzere. Akşam sulaması kökleri üşütebilir, sulamayı sabaha ertele."</div></div></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-emerald-600 shadow-md">4</div><div><strong class="text-gray-800 block mb-1 text-xl">Karbondioksit ve Fotosentez Optimizasyonu</strong><p class="text-gray-600">Işık sensöründen (LDR) gelen veriyle güneşin en tepede olduğunu anlayan AI, eğer seradaki CO2 seviyesi bitkilerin tüketimi yüzünden düştüyse havalandırma kapaklarını açarak içeri taze hava girmesini sağlar.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-emerald-600 shadow-md">5</div><div><strong class="text-gray-800 block mb-1 text-xl">Bildirim</strong><p class="text-gray-600">Çiftçinin telefonuna durum raporlanır:</p><div class="mt-3"><div class="bg-blue-50 border-l-4 border-blue-600 rounded-r-lg p-4 text-gray-600"><strong class="text-blue-600">📲 DURUM RAPORU:</strong> "Sera içi nem dengelendi, mantar riski önlendi. Sabaha karşı beklenen don tehlikesine karşı ısıtıcılar saat 04:00'te otomatik devreye girecek."</div></div></div></li>
+                </ul>
+            </div>
+            <div class="mt-8 bg-gradient-to-r from-emerald-50 to-white border border-emerald-200 rounded-xl p-8 relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 opacity-10"><i class="ri-home-4-line text-[10rem] text-emerald-600"></i></div>
+                <div class="relative z-10"><p class="text-gray-800 font-semibold text-lg leading-relaxed flex gap-3"><i class="ri-double-quotes-l text-emerald-600 text-3xl opacity-50"></i><span>Mantar hastalığı başladıktan sonra değil, <strong>çiy noktası riski oluşmadan önce</strong> müdahale etmek felsefesini yansıtır. Sera iklimi, bitki strese girmeden AI tarafından yönetilir.</span></p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project: Dijital Çoban -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 border-t-4 border-orange-500">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-aliens-fill text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Ahır Sağlık ve Yem Takip</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Dijital Çoban: Ahır Sağlık ve Yem Takipçisi</h2>
+            </div>
+        </div>
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500 shadow-sm">
+                <h3 class="text-orange-600 font-bold text-xl mb-2 flex items-center gap-2"><i class="ri-focus-2-line"></i> Hedef</h3>
+                <p>Büyükbaş hayvanların yem tüketim alışkanlıklarını ve hareket bozukluklarını (topallama) izleyerek hastalıkları süt kaybı başlamadan önce tespit etmek.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2"><i class="ri-error-warning-line text-red-500"></i> Problem</h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">"İnekler yemliğe gelip yem kalmadığında aç kalıyor, kimse fark etmiyor. Ya da bir inek topallayıp yemliğe geç gelmeye veya az yemeye başladı, hastalığı ancak sütü düşünce anlıyoruz, o zaman da ilaç masrafı başlıyor."</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2"><i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Raspberry Pi</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Kamera</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Ultrasonik Sensör</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">RFID Okuyucu</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Arduino</span>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2"><i class="ri-brain-line text-orange-500 text-3xl"></i> AI ile Adım Adım Çözüm</h3>
+                <ul class="space-y-6">
+                    <li class="flex gap-4"><div class="step-number bg-orange-500 shadow-md">1</div><div><strong class="text-gray-800 block mb-1 text-xl">Kimlik ve Konum</strong>RFID okuyucu, yemliğe gelen ineğin küpe numarasını okur ve Raspberry Pi'ye iletir.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-orange-500 shadow-md">2</div><div><strong class="text-gray-800 block mb-1 text-xl">Yem Seviyesi Analizi</strong>Ultrasonik sensör yemliğin doluluk oranını ölçer.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-orange-500 shadow-md">3</div><div><strong class="text-gray-800 block mb-1 text-xl">Tüketim Hesaplama (AI)</strong>İnek yemlikten ayrıldığında, AI "Bu ineğin 10 dakikada yediği yem miktarı" hesaplar.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-orange-500 shadow-md">4</div><div><strong class="text-gray-800 block mb-1 text-xl">Davranış ve Postür Analizi</strong>Koridor kamerasındaki hafif bir AI modeli (örn: MediaPipe veya YOLO-Pose), ineğin yürüyüş simetrisini analiz eder.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-orange-500 shadow-md">5</div><div><strong class="text-gray-800 block mb-1 text-xl">Erken Teşhis</strong>Eğer "1042 Küpeli İnek" son 3 gündür normalden %30 az yem yiyorsa VE yürüyüşünde arka sol ayağına ağırlık verme eğilimi varsa, AI bunu "Erken Hastalık Sinyali" olarak sınıflandırır.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-orange-500 shadow-md">6</div><div><strong class="text-gray-800 block mb-1 text-xl">Aksiyon</strong>Çiftçinin telefonuna uyarı gider. Yemlikte yem biterse motor çalıştırılıp hazneden otomatik yem takviyesi yapılır.</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project: Köy Evi Akıllı Su Haznesi -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 border-t-4 border-blue-500">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-home-wifi-line text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-blue-500 font-semibold text-sm uppercase tracking-wider">Kırsal Konut</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Köy Evi Akıllı Su Haznesi ve Kaçak Avcısı</h2>
+            </div>
+        </div>
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500 shadow-sm">
+                <h3 class="text-blue-600 font-bold text-xl mb-2 flex items-center gap-2"><i class="ri-focus-2-line"></i> Hedef</h3>
+                <p>Kırsal evlerin su depolarının doluluk oranını yönetmek, şebeke suyu kesildiğinde otomatik devreye girmek ve gizli su kaçaklarını tespit etmek.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2"><i class="ri-error-warning-line text-red-500"></i> Problem</h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">"Köydeki evin su deposu bazen taşıp boşa akıyor, bazen de kuruyup ev susuz kalıyor. Borularda gizli bir kaçak varsa suyumuz günlerce yetmiyor, fark edemiyoruz."</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2"><i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Arduino</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Ultrasonik Sensör</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Akış Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Basınç Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">GSM Modülü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Raspberry Pi</span>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2"><i class="ri-brain-line text-blue-500 text-3xl"></i> AI ile Adım Adım Çözüm</h3>
+                <ul class="space-y-6">
+                    <li class="flex gap-4"><div class="step-number bg-blue-500 shadow-md">1</div><div><strong class="text-gray-800 block mb-1 text-xl">Stok Takibi</strong>Ultrasonik sensör depodaki suyun hacmini ölçer. Çiftçi telefondan "Depoda %40 suyum var" bilgisini görür.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-blue-500 shadow-md">2</div><div><strong class="text-gray-800 block mb-1 text-xl">Tüketim Paterni (AI)</strong>Raspberry Pi, evin su tüketim alışkanlığını öğrenir (örn: sabah yoğun, gece sıfır).</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-blue-500 shadow-md">3</div><div><strong class="text-gray-800 block mb-1 text-xl">Kaçak Tespiti (Anomali)</strong>AI, gece 03:00'te akış sensöründen su aktığını görürse, bunu "Gizli Kaçak" veya "Sifon Kaçağı" olarak etiketler.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-blue-500 shadow-md">4</div><div><strong class="text-gray-800 block mb-1 text-xl">Basınç Analizi</strong>Basınç sensörü, musluklar kapalıyken boru hattındaki basınç düşüşünü izler, "mikro çatlak var" uyarısı verebilir.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-blue-500 shadow-md">5</div><div><strong class="text-gray-800 block mb-1 text-xl">Otomatik Yönetim</strong>Şebeke suyu kesildiğinde motorlu vana kapanır ve depo devreye girer. Depo azalırsa SMS atar.</div></li>
+                    <li class="flex gap-4"><div class="step-number bg-blue-500 shadow-md">6</div><div><strong class="text-gray-800 block mb-1 text-xl">Tahmin</strong>"Mevcut tüketimle depo 1.5 gün sonra bitecek" uyarısı üretir.</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project: Tarım Deposu / Ahır İklim Kontrolü -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 border-t-4 border-indigo-500">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-indigo-50 text-indigo-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-store-3-line text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-indigo-500 font-semibold text-sm uppercase tracking-wider">Depo & Ahır İklim</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Tarım Deposu / Ahır İklim Kontrolü</h2>
+            </div>
+        </div>
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            <div class="bg-indigo-50 rounded-xl p-6 border-l-4 border-indigo-500 shadow-sm">
+                <h3 class="text-indigo-600 font-bold text-xl mb-2 flex items-center gap-2"><i class="ri-focus-2-line"></i> Hedef</h3>
+                <p>Tarım ürünlerinin veya hayvanların bulunduğu kapalı alanları <strong>yangın, gaz veya ani ısı değişimlerine</strong> karşı korumak.</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2"><i class="ri-error-warning-line text-red-500"></i> Problem</h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">"Gece depodaki patateslerin ısısı yükselince çürümeye başlıyor fark etmiyorum. Ya da ahırdaki yemler oksijensiz kalıp metan gazı çıkarıyor, hayvanlar hasta oluyor."</p>
+            </div>
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2"><i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Arduino</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">MQ-2 Gaz Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Sıcaklık Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Nem Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Servo Motor (Pencere)</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Fan</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm">Raspberry Pi</span>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2"><i class="ri-brain-line text-indigo-500 text-3xl"></i> AI ile Adım Adım Çözüm</h3>
+                <ul class="space-y-6">
+                    <li class="flex gap-4"><div class="step-number bg-indigo-500 shadow-md">1</div><div><strong class="text-gray-800 block mb-1 text-xl">Anormallik Tespiti (AI)</strong><p class="text-gray-600">Arduino sürekli veri gönderir. Raspberry Pi'deki AI, bu verilerin geçmiş 7 günlük ortalamasını bilir.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-indigo-500 shadow-md">2</div><div><strong class="text-gray-800 block mb-1 text-xl">Teşhis</strong><p class="text-gray-600">Sıcaklık 5 dakika içinde 2 derece birden artarsa, AI bunu <span class="bg-red-50 text-red-600 px-2 py-0.5 rounded font-semibold">"Anormal"</span> olarak etiketler.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-indigo-500 shadow-md">3</div><div><strong class="text-gray-800 block mb-1 text-xl">Gaz Analizi</strong><p class="text-gray-600">MQ-2 sensörü metan seviyesini okur. AI, "Metan yükselirken sıcaklık da yükseliyorsa <strong class="text-red-500">Yanma Riski Var</strong>" çıkarımını yapar.</p></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-indigo-500 shadow-md">4</div><div><strong class="text-gray-800 block mb-1 text-xl">Aksiyon Zinciri</strong><div class="space-y-2 ml-2 mt-1"><div class="flex items-start gap-2"><span class="bg-yellow-100 text-yellow-700 text-xs font-bold px-2 py-1 rounded mt-0.5 whitespace-nowrap">ORTA SEVİYE</span><p class="text-gray-600">Servo motoru çalıştırarak havalandırma penceresini açar, fanı devreye sokar.</p></div><div class="flex items-start gap-2"><span class="bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded mt-0.5 whitespace-nowrap">YÜKSEK (YANGIN)</span><p class="text-gray-600">Arduino su pompasını açar, çiftçiye "Depoda yangın var" mesajı gönderir.</p></div></div></div></li>
+                    <li class="flex gap-4"><div class="step-number bg-indigo-500 shadow-md">5</div><div><strong class="text-gray-800 block mb-1 text-xl">Öğrenme</strong><p class="text-gray-600">AI, zamanla depodaki ürün yüküne göre (yeni ürün girdiğinde nem yükselir) kendi eşik değerlerini (threshold) otomatik günceller.</p></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- Simple Footer -->
+<footer class="bg-gray-900 text-white py-12 mt-4">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<div class="font-['Pacifico'] text-3xl text-primary mb-4">AgriMind</div>
+<p class="text-gray-400 mb-6">Elektronik, robotik ve yapay zeka ile tarımda akıllı çözümler geliştiriyoruz.</p>
+<p class="text-gray-500 text-sm">© 2024 AgriMind. Tüm hakları saklıdır.</p>
+</div>
+</footer>
+
+</body>
+</html>

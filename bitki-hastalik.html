@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitki Hastalık Tespit Sistemi - AgriMind</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2196F3',
+secondary: '#4CAF50'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+},
+fontFamily: {
+'heading': ['Poppins', 'sans-serif'],
+'body': ['Open Sans', 'sans-serif'],
+'logo': ['Pacifico', 'serif']
+}
+}
+}
+}
+</script>
+<style>
+body { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+.gradient-bg { background: linear-gradient(135deg, #0d9488 0%, #15803d 100%); }
+.step-number {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 2rem; height: 2rem; border-radius: 9999px;
+    color: white; font-weight: bold; flex-shrink: 0;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<a href="index.html" class="font-['Pacifico'] text-3xl text-primary hover:opacity-80 transition">AgriMind</a>
+<div class="flex items-center gap-8">
+<a href="index.html" class="text-gray-700 hover:text-primary transition flex items-center gap-2 font-semibold">
+<i class="ri-arrow-left-line"></i> Ana Sayfaya Dön
+</a>
+</div>
+</div>
+</nav>
+
+<!-- Page Header -->
+<section class="gradient-bg pt-32 pb-20">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Bitki Hastalık Tespit Sistemi</h1>
+<p class="text-xl text-white opacity-90 font-light">Tarlada drone ile bitki sağlığını haritalayın, hastalığı yayıldan önce yakalayın.</p>
+</div>
+</section>
+
+<!-- Content -->
+<section class="py-16">
+<div class="max-w-4xl mx-auto px-6">
+
+    <!-- Project: Drone ile Bitki Sağlığı Haritalama -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 border-t-4 border-teal-600">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-flight-takeoff-line text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-teal-600 font-semibold text-sm uppercase tracking-wider">Alan Ölçeğinde Tespit</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Tarlada Drone ile Bitki Sağlığı Haritalama</h2>
+            </div>
+        </div>
+
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+
+            <!-- Hedef -->
+            <div class="bg-teal-50 rounded-xl p-6 border-l-4 border-teal-600 shadow-sm">
+                <h3 class="text-teal-700 font-bold text-xl mb-2 flex items-center gap-2">
+                    <i class="ri-focus-2-line"></i> Hedef
+                </h3>
+                <p>Büyük tarla veya meyve bahçesinde, drone üzerinden çoklu spektral kamera ile bitki stresini ve hastalık yayılımını haritalamak.</p>
+            </div>
+
+            <!-- Problem -->
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2">
+                    <i class="ri-error-warning-line text-red-500"></i> Problem
+                </h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">
+                    "200 dönümlük mısır tarlam var. Orta kısımdaki bitkiler sararıyor ama traktörle gidip kontrol edene kadar hastalık yarısına yayılmış oluyor. Hangi bölgede ne olduğunu anlayamıyorum, her yere aynı ilacı atıyorum. Üstten bakan bir gözüm olsa, nerede problem olduğunu hemen görebilsem."
+                </p>
+            </div>
+
+            <!-- Donanım -->
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2">
+                    <i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-drone-line text-teal-600 mr-1"></i> DJI veya Benzeri Drone</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-camera-lens-line text-primary mr-1"></i> NDVI Kamera</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-camera-line text-secondary mr-1"></i> RGB Kamera</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-cpu-line text-primary mr-1"></i> Raspberry Pi / Jetson Nano</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-map-pin-line text-teal-600 mr-1"></i> RTK GPS Modülü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-battery-2-charge-line text-secondary mr-1"></i> Li-Po Batarya</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-computer-line text-primary mr-1"></i> Yer İstasyonu</span>
+                </div>
+            </div>
+
+            <!-- AI ile Adım Adım Çözüm -->
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2">
+                    <i class="ri-brain-line text-teal-600 text-3xl"></i> AI ile Adım Adım Çözüm
+                </h3>
+
+                <ul class="space-y-8">
+                    <li class="flex gap-4">
+                        <div class="step-number bg-teal-600 shadow-md">1</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Uçuş Planı</strong>
+                            <p class="text-gray-600">Çiftçi, tablet üzerinden tarla sınırlarını haritaya çizer. Drone, bu alanı "ızgara" deseninde, 50-100 metre yükseklikte, 80% örtüşme (overlap) ile otomatik tarar. RTK GPS sayesinde her görüntünün koordinatı cm hassasiyetle kaydedilir.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-teal-600 shadow-md">2</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Çoklu Spektral Görüntü Alma</strong>
+                            <p class="text-gray-600">Drone uçarken eş zamanlı olarak iki kamera veri toplar:</p>
+                            <div class="mt-3 space-y-3">
+                                <div class="bg-blue-50 border-l-4 border-primary rounded-r-lg p-4">
+                                    <strong class="text-primary">NDVI Kamera (Kırmızı + NIR):</strong>
+                                    <p class="text-gray-600 mt-1">Bitkilerin klorofil miktarını ölçer. Sağlıklı bitki = yüksek NDVI (0.7-0.9). Stresli/hasta bitki = düşük NDVI (0.3-0.5). Ölü/çok hasta bitki = negatif NDVI.</p>
+                                </div>
+                                <div class="bg-green-50 border-l-4 border-secondary rounded-r-lg p-4">
+                                    <strong class="text-secondary">RGB Kamera (Yüksek Çözünürlük):</strong>
+                                    <p class="text-gray-600 mt-1">Detaylı renk görüntüsü alır (yaprak lekeleri, renk değişimleri vb. için).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-teal-600 shadow-md">3</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Gerçek Zamanlı Analiz (Edge AI)</strong>
+                            <p class="text-gray-600">Jetson Nano üzerinde çalışan AI modeli, uçuş sırasında NDVI verisini analiz eder. Tarlanın her pikseli için "Sağlık Skoru" hesaplar. Anormal bölgeleri (düşük NDVI) anında işaretler.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-teal-600 shadow-md">4</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Hastalık / Yayılım Tespiti (AI)</strong>
+                            <p class="text-gray-600">Uçuş tamamlandığında, yer istasyonuna indirilen görüntüler detaylı analize tabi tutulur:</p>
+                            <div class="mt-3 space-y-3">
+                                <div class="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-4">
+                                    <strong class="text-red-600">NDVI Anormallik Haritası:</strong>
+                                    <p class="text-gray-600 mt-1">AI, tarlanın sağlık haritasını oluşturur. Kırmızı alanlar = ciddi stres/hastalık, Sarı = orta stres, Yeşil = sağlıklı.</p>
+                                </div>
+                                <div class="bg-teal-50 border-l-4 border-teal-600 rounded-r-lg p-4">
+                                    <strong class="text-teal-700">RGB Detay Analizi:</strong>
+                                    <p class="text-gray-600 mt-1">Kırmızı işaretlenen bölgelerin RGB görüntüleri, yaprak düzeyinde CNN modeline gönderilir. AI, bu bölgedeki sorunun nedenini sınıflandırır:</p>
+                                    <ul class="mt-2 space-y-1 list-disc list-inside text-gray-600">
+                                        <li><strong>Hastalık mı?</strong> (Rust - Pas, Blight, Smut - Kara hastalık)</li>
+                                        <li><strong>Besin eksikliği mi?</strong> (Azot eksikliği = sarıma, Fosfor = morumsu, Potasyum = kenar yanıklığı)</li>
+                                        <li><strong>Su stresi mi?</strong> (Kuraklık = bütün yaprak solgun)</li>
+                                        <li><strong>Yabani ot baskısı mı?</strong> (Segmentasyon ile ayırır)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-teal-600 shadow-md">5</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Yayılım Analizi</strong>
+                            <p class="text-gray-600">AI, birden fazla uçuşun verisini (örneğin haftalık) karşılaştırır. <em class="bg-yellow-50 px-1 rounded">"A-Bloğu'ndaki düşük NDVI alanı geçen hafta 5 dönümdü, bu hafta 12 dönüme yayılmış. Yayılım hızı: %140. Acil müdahale gerekli."</em></p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-teal-600 shadow-md">6</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Reçete Üretimi</strong>
+                            <p class="text-gray-600">AI, tespit edilen soruna ve alana özel ilaç/gübre önerisi üretir:</p>
+                            <div class="mt-3 space-y-3">
+                                <div class="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-4 text-gray-600">
+                                    <strong class="text-red-600">Bölge-A (12 dönüm):</strong> Mısır pas hastalığı (Common Rust) tespit edildi. Öneri: Propiconazole içerikli fungisit. Doz: 300ml/dönüm. Uygulama: Sadece Bölge-A, diğer bölgeler sağlıklı.
+                                </div>
+                                <div class="bg-amber-50 border-l-4 border-amber-500 rounded-r-lg p-4 text-gray-600">
+                                    <strong class="text-amber-600">Bölge-C (8 dönüm):</strong> Azot eksikliği belirtileri. Öneri: Üre gübresi, 15kg/dönüm.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-teal-600 shadow-md">7</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Değişken Oranlı Uygulama (VRA)</strong>
+                            <p class="text-gray-600">AI üretilen harita, traktörün GPS'ine yüklenir. Traktör, sağlıklı bölgelerden geçerken ilaç püskürtmez, sadece hasta bölgelere uygulama yapar. Bu sayede <strong class="text-secondary">%30-50 ilaç tasarrufu</strong> sağlanır.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-teal-600 shadow-md">8</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Zaman Serisi ve Tahmin</strong>
+                            <p class="text-gray-600">AI, sezon boyunca haftalık uçuş verilerini depolar. <em class="bg-yellow-50 px-1 rounded">"Geçen yıl bu tarihlerde aynı bölgede pas hastalığı başlamıştı. Bu yıl hava koşulları benzer. Önleyici tarama önerisi: 3 gün sonra."</em></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Felsefe Özeti -->
+            <div class="mt-8 bg-gradient-to-r from-teal-50 to-white border border-teal-200 rounded-xl p-8 relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 opacity-10">
+                    <i class="ri-flight-takeoff-line text-[10rem] text-teal-600"></i>
+                </div>
+                <div class="relative z-10">
+                    <p class="text-gray-800 font-semibold text-lg leading-relaxed flex gap-3">
+                        <i class="ri-double-quotes-l text-teal-600 text-3xl opacity-50"></i>
+                        <span>Her yere aynı ilacı atmak yerine, <strong>"sadece hasta bölgeye, sadece ihtiyacı kadar"</strong> uygulama felsefesini yansıtır. Üstten bakan bir göz, hastalığı yarısına yayılmadan önce yakalar.</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- Simple Footer -->
+<footer class="bg-gray-900 text-white py-12 mt-4">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<div class="font-['Pacifico'] text-3xl text-primary mb-4">AgriMind</div>
+<p class="text-gray-400 mb-6">Elektronik, robotik ve yapay zeka ile tarımda akıllı çözümler geliştiriyoruz.</p>
+<p class="text-gray-500 text-sm">© 2024 AgriMind. Tüm hakları saklıdır.</p>
+</div>
+</footer>
+
+</body>
+</html>

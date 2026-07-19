@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sulama Projeleri - AgriMind</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2196F3',
+secondary: '#4CAF50'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+},
+fontFamily: {
+'heading': ['Poppins', 'sans-serif'],
+'body': ['Open Sans', 'sans-serif'],
+'logo': ['Pacifico', 'serif']
+}
+}
+}
+}
+</script>
+<style>
+body { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+.gradient-bg { background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%); }
+.step-number { 
+    display: inline-flex; align-items: center; justify-content: center; 
+    width: 2rem; height: 2rem; border-radius: 9999px; 
+    background-color: #2196F3; color: white; font-weight: bold; flex-shrink: 0;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<a href="index.html" class="font-['Pacifico'] text-3xl text-primary hover:opacity-80 transition">AgriMind</a>
+<div class="flex items-center gap-8">
+<a href="index.html" class="text-gray-700 hover:text-primary transition flex items-center gap-2 font-semibold">
+<i class="ri-arrow-left-line"></i> Ana Sayfaya Dön
+</a>
+</div>
+</div>
+</nav>
+
+<!-- Page Header -->
+<section class="gradient-bg pt-32 pb-20">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Sulama Projeleri</h1>
+<p class="text-xl text-white opacity-90 font-light">Tarlanızı suya değil, bilgiye doyurun. Adım adım gerçek hayat senaryoları.</p>
+</div>
+</section>
+
+<!-- Content -->
+<section class="py-16">
+<div class="max-w-4xl mx-auto px-6">
+<!-- Project 1 -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-drop-fill text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-secondary font-semibold text-sm uppercase tracking-wider">Senaryo 1</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Sulama Zamanlayıcısı Değil, Toprak Doktoru</h2>
+            </div>
+        </div>
+        
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+            
+            <!-- Hedef -->
+            <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-primary shadow-sm">
+                <h3 class="text-primary font-bold text-xl mb-2 flex items-center gap-2">
+                    <i class="ri-focus-2-line"></i> Hedef
+                </h3>
+                <p>Tarlanın her noktasına aynı anda su vermek yerine, <strong>sadece susayan bölgeye</strong> su göndermek.</p>
+            </div>
+            
+            <!-- Problem -->
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2">
+                    <i class="ri-error-warning-line text-red-500"></i500"></i> Problem
+                </h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">
+                    "Tarlamın bir ucundaki toprak çamur gibi, diğer ucu çatlıyor. Sabit saatte sulamayı açınca ya bir yeri boğuyorum ya da bir yeri susuz bırakıyorum."
+                </p>
+            </div>
+            
+            <!-- Donanım -->
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2">
+                    <i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-cpu-line text-primary mr-1"></i> Arduino</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-water-percent-line text-secondary mr-1"></i> Kapasitif Nem Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-temp-hot-line text-primary mr-1"></i> DHT22 (Sıcaklık/Nem)</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-map-pin-line text-secondary mr-1"></i> GPS</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-valve-line text-primary mr-1"></i> Motorlu Vana</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-computer-line text-secondary mr-1"></i> Raspberry Pi</span>
+                </div>
+            </div>
+            
+            <!-- AI ile Adım Adım Çözüm -->
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2">
+                    <i class="ri-brain-line text-secondary text-3xl"></i> AI ile Adım Adım Çözüm
+                </h3>
+                
+                <ul class="space-y-8">
+                    <li class="flex gap-4">
+                        <div class="step-number shadow-md">1</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Veri Toplama</strong>
+                            <p class="text-gray-600">Tarlanın farklı noktalarına gömülü Arduino'lar, her 15 dakikada bir toprak nemini (%), sıcaklığı ve hava nemini okur.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number shadow-md">2</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">GPS Konumlandırma</strong>
+                            <p class="text-gray-600">Hangi sensörün hangi koordinatta olduğu bellidir.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number shadow-md">3</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Tahmin Modeli (AI)</strong>
+                            <p class="text-gray-600">Raspberry Pi'de çalışan basit bir LSTM (Uzun Kısa Süreli Bellek) modeli, son 24 saatin sensör verilerine bakar. Bu model, <em class="bg-yellow-50 px-1 rounded">"Önümüzdeki 1 saat içinde bu bölgenin nem oranı nedir?"</em> diye tahmin yürütür. Ayrıca hava durumu API'sinden (internet varsa) yağmur yağma ihtimalini çeker.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number shadow-md">4</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Karar Verme (Optimizasyon)</strong>
+                            <p class="text-gray-600">AI, eğer bu bölgenin nemi %40'ın altına düşecek ve önümüzdeki 6 saat yağmur yoksa, <strong class="text-primary">"1 Numaralı Vana Açılsın"</strong> komutunu üretir. Eğer nem %60'ın üzerindeyse, o bölgeye su göndermeyi reddeder (Tasarruf).</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number shadow-md">5</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Uzaktan Müdahale</strong>
+                            <p class="text-gray-600">Çiftçi, cep telefonundan tarlanın nem haritasını (Isı Haritası) görür. Müdahale etmek isterse, AI'ın kararını geçersiz kılıp manuel de açabilir.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!-- Simple Footer -->
+<footer class="bg-gray-900 text-white py-12 mt-4">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<div class="font-['Pacifico'] text-3xl text-primary mb-4">AgriMind</div>
+<p class="text-gray-400 mb-6">Elektronik, robotik ve yapay zeka ile tarımda akıllı çözümler geliştiriyoruz.</p>
+<p class="text-gray-500 text-sm">© 2024 AgriMind. Tüm hakları saklıdır.</p>
+</div>
+</footer>
+
+</body>
+</html>

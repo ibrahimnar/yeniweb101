@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hava Durumu Tahmin Sistemi - AgriMind</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2196F3',
+secondary: '#4CAF50'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+},
+fontFamily: {
+'heading': ['Poppins', 'sans-serif'],
+'body': ['Open Sans', 'sans-serif'],
+'logo': ['Pacifico', 'serif']
+}
+}
+}
+}
+</script>
+<style>
+body { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+.gradient-bg { background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%); }
+.step-number {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 2rem; height: 2rem; border-radius: 9999px;
+    color: white; font-weight: bold; flex-shrink: 0;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<a href="index.html" class="font-['Pacifico'] text-3xl text-primary hover:opacity-80 transition">AgriMind</a>
+<div class="flex items-center gap-8">
+<a href="index.html" class="text-gray-700 hover:text-primary transition flex items-center gap-2 font-semibold">
+<i class="ri-arrow-left-line"></i> Ana Sayfaya Dön
+</a>
+</div>
+</div>
+</nav>
+
+<!-- Page Header -->
+<section class="gradient-bg pt-32 pb-20">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Hava Durumu Tahmin Sistemi</h1>
+<p class="text-xl text-white opacity-90 font-light">Meteorolojinin göremediği, tam sizin tarlanızın mikroklimasını tahmin edin.</p>
+</div>
+</section>
+
+<!-- Content -->
+<section class="py-16">
+<div class="max-w-4xl mx-auto px-6">
+
+    <!-- Project: Yerel Mikroklima ve Don Erken Uyarı Sistemi -->
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12 border-t-4 border-sky-600">
+        <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+            <div class="w-16 h-16 bg-sky-50 text-sky-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-inner">
+                <i class="ri-cloud-windy-line text-3xl"></i>
+            </div>
+            <div>
+                <span class="text-sky-600 font-semibold text-sm uppercase tracking-wider">Tarla Ölçeğinde Tahmin</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-1">Yerel Mikroklima ve Don Erken Uyarı Sistemi</h2>
+            </div>
+        </div>
+
+        <div class="space-y-8 text-gray-700 leading-relaxed text-lg">
+
+            <!-- Hedef -->
+            <div class="bg-sky-50 rounded-xl p-6 border-l-4 border-sky-600 shadow-sm">
+                <h3 class="text-sky-700 font-bold text-xl mb-2 flex items-center gap-2">
+                    <i class="ri-focus-2-line"></i> Hedef
+                </h3>
+                <p>Genel hava durumu tahminlerinin (il/ilçe bazlı) tarladaki gerçek durumla uyuşmadığı durumlarda, tarlaya özel sensörlerle nokta atışı hava durumu ve don tahmini yapmak.</p>
+            </div>
+
+            <!-- Problem -->
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-3 flex items-center gap-2">
+                    <i class="ri-error-warning-line text-red-500"></i> Problem
+                </h3>
+                <p class="italic border-l-4 border-gray-300 pl-4 text-gray-600 bg-gray-50 py-4 pr-4 rounded-r-lg">
+                    "Meteoroloji 'Bu gece ilçede hava 3 derece' diyor, benim çukurda kalan tarlama bir gidiyorum sıcaklık -1'e düşmüş, cevizleri, fındıkları don vurmuş. Genel hava durumuna güvenip hareket edemiyorum. Bana tam olarak benim tarlamın, benim vademin havası lazım."
+                </p>
+            </div>
+
+            <!-- Donanım -->
+            <div>
+                <h3 class="text-gray-800 font-bold text-xl mb-4 flex items-center gap-2">
+                    <i class="ri-tools-line text-gray-500"></i> Donanım Bileşenleri
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-cpu-line text-primary mr-1"></i> Arduino Nano</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-temp-hot-line text-sky-600 mr-1"></i> BMP280</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-rainy-line text-primary mr-1"></i> Yağmur Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-windy-line text-sky-600 mr-1"></i> Anemometre</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-thermometer-line text-primary mr-1"></i> Toprak Sıcaklık Sensörü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-signal-tower-line text-sky-600 mr-1"></i> LoRaWAN Modülü</span>
+                    <span class="bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 shadow-sm"><i class="ri-sun-line text-yellow-500 mr-1"></i> Güneş Paneli & Pil</span>
+                </div>
+            </div>
+
+            <!-- AI ile Adım Adım Çözüm -->
+            <div class="pt-6 border-t border-gray-100">
+                <h3 class="text-gray-800 font-bold text-2xl mb-6 flex items-center gap-2">
+                    <i class="ri-brain-line text-sky-600 text-3xl"></i> AI ile Adım Adım Çözüm
+                </h3>
+
+                <ul class="space-y-8">
+                    <li class="flex gap-4">
+                        <div class="step-number bg-sky-600 shadow-md">1</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Mikro Veri Toplama</strong>
+                            <p class="text-gray-600">Tarlanın en riskli (örneğin en çukur veya rüzgar alan) noktasına kurulan istasyon; basınç, rüzgar, sıcaklık ve nem verilerini LoRaWAN üzerinden eve veya merkeze iletir.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-sky-600 shadow-md">2</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Zaman Serisi Analizi (AI)</strong>
+                            <p class="text-gray-600">Toplanan bu veriler, bulutta veya evdeki bilgisayarda çalışan bir LSTM (Long Short-Term Memory) yapay sinir ağına beslenir. Bu model, tarlanın geçmiş yıllardaki sıcaklık düşüş hızını ve basınç değişimlerini öğrenmiştir.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-sky-600 shadow-md">3</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Nokta Atışı Don Tahmini</strong>
+                            <p class="text-gray-600">AI modeli, akşam saat 20:00'deki basınç düşüş hızını, rüzgarın kesilmesini ve nem oranını analiz ederek şu tahmini yapar: <em class="bg-yellow-50 px-1 rounded">"Genel hava durumu 2 derece gösterse de, tarladaki mevcut hava akımı ve nem kaybı nedeniyle bu gece saat 03:30'da tarlada sıcaklık -1.5 dereceye düşecek (Radyasyon Donu)."</em></p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-sky-600 shadow-md">4</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Erken Aksiyon Tetikleme</strong>
+                            <p class="text-gray-600">Cihaz, don tehlikesini 5-6 saat önceden kesin olarak belirlediğinde, tarlada kurulu olan sisleme/yağmurlama sistemini veya don pervanelerini otomatik olarak devreye sokacak sinyali gönderir.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="step-number bg-sky-600 shadow-md">5</div>
+                        <div>
+                            <strong class="text-gray-800 block mb-1 text-xl">Bildirim</strong>
+                            <p class="text-gray-600">Çiftçiye SMS gider:</p>
+                            <div class="mt-3">
+                                <div class="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-4 text-gray-600">
+                                    <strong class="text-red-600">📩 SMS UYARI:</strong> "Dikkat! Tarlanızda bu gece saat 03:00 ile 06:00 arasında zirai don riski %95'tir. Don önleme sistemleri aktif hale getirilmiştir."
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Felsefe Özeti -->
+            <div class="mt-8 bg-gradient-to-r from-sky-50 to-white border border-sky-200 rounded-xl p-8 relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 opacity-10">
+                    <i class="ri-cloud-windy-line text-[10rem] text-sky-600"></i>
+                </div>
+                <div class="relative z-10">
+                    <p class="text-gray-800 font-semibold text-lg leading-relaxed flex gap-3">
+                        <i class="ri-double-quotes-l text-sky-600 text-3xl opacity-50"></i>
+                        <span>İlçenin havası değil, <strong>tam sizin tarlanızın, sizin vadinizin havası</strong> lazım felsefesini yansıtır. Genel tahmin 2 derece dese de, mikroklimanızdaki radyasyon donunu 5-6 saat önceden yakalar.</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- Simple Footer -->
+<footer class="bg-gray-900 text-white py-12 mt-4">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<div class="font-['Pacifico'] text-3xl text-primary mb-4">AgriMind</div>
+<p class="text-gray-400 mb-6">Elektronik, robotik ve yapay zeka ile tarımda akıllı çözümler geliştiriyoruz.</p>
+<p class="text-gray-500 text-sm">© 2024 AgriMind. Tüm hakları saklıdır.</p>
+</div>
+</footer>
+
+</body>
+</html>
